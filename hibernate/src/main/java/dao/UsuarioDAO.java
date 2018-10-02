@@ -3,20 +3,20 @@ package dao;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import model.ILogin;
+import model.IUsuario;
 import util.HibernateUtil;
-import vo.Login;
+import vo.Usuario;
 
-public class LoginDAO implements ILogin {
+public class UsuarioDAO implements IUsuario {
 
 	@Override
-	public Login buscaLogin(Login login) {
+	public Usuario buscaLogin(Usuario login) {
 
 		return null;
 	}
 
 	@Override
-	public void createUser(Login login) {
+	public void createUser(Usuario login) {
 
 		Session session = HibernateUtil.getSessionFactory().openSession();
 
@@ -31,7 +31,7 @@ public class LoginDAO implements ILogin {
 	}
 
 	@Override
-	public boolean createLogin(Login login) {
+	public boolean createLogin(Usuario login) {
 
 		Session session = HibernateUtil.getSessionFactory().openSession();
 

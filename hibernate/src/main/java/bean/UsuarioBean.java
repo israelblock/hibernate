@@ -7,34 +7,34 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
-import model.LoginModel;
-import vo.Login;
+import model.UsuarioModel;
+import vo.Usuario;
 
 @SuppressWarnings("deprecation")
 @ManagedBean(name = "loginBean")
 @SessionScoped
-public class LoginBean implements Serializable {
+public class UsuarioBean implements Serializable {
 	
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 6491642606878359116L;
-	private LoginModel loginModel;
-	private Login login;
+	private UsuarioModel loginModel;
+	private Usuario login;
 
-	public LoginBean() {
-		this.setLogin(new Login());
+	public UsuarioBean() {
+		this.setLogin(new Usuario());
 		
-		this.loginModel = new LoginModel();
+		this.loginModel = new UsuarioModel();
 		
 	}
 
-	public Login getLogin() {
+	public Usuario getLogin() {
 		return login;
 	}
 
-	public void setLogin(Login login) {
+	public void setLogin(Usuario login) {
 		this.login = login;
 	}
 	
@@ -49,7 +49,7 @@ public class LoginBean implements Serializable {
 			
 			setLogin(null);
 		}else {
-			setLogin(new Login());
+			setLogin(new Usuario());
 			
 			FacesContext contexto = FacesContext.getCurrentInstance();
 			

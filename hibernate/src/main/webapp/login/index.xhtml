@@ -6,23 +6,28 @@
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
 	<title>Login</title>
 </h:head>
 <h:body>
 	<h:form>
+		
 		<p:messages id="messages" />
+		
 		<p:panelGrid columns="2">
+			
 			<p:outputLabel for="login" value="Login:" />
 			<p:inputText id="login" value="#{loginBean.login.login}" />
 
 			<p:outputLabel for="senha" value="Senha:" />
 			<p:password id="senha" value="#{loginBean.login.senha}" />
 
-			<p:commandButton value="Enviar"
-			 	action="#{loginBean.createLogin()}" ajax="false">
-			</p:commandButton>
-
 		</p:panelGrid>
+		<br />
+		<p:commandButton value="Enviar"
+		 	action="#{loginBean.createLogin()}" ajax="false">
+		</p:commandButton>
+		
 	</h:form>
 </h:body>
 </html>
